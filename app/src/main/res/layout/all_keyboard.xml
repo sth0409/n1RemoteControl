@@ -1,0 +1,965 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/keyboard_bg"
+    android:orientation="vertical"
+    android:paddingBottom="40dp"
+    android:paddingLeft="40dp"
+    android:id="@+id/llAllKeyboard"
+    android:paddingRight="40dp"
+    android:paddingTop="30dp" >
+    
+    <LinearLayout
+        android:id="@+id/ll_keyboard_number_page_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_1"
+                style="@style/key_base"
+                android:tag="@string/key_1"
+                android:text="@string/key_1" />
+
+            <TextView
+                android:id="@+id/tv_2"
+                style="@style/key_base"
+                android:tag="@string/key_2"
+                android:text="@string/key_2" />
+
+            <TextView
+                android:id="@+id/tv_3"
+                style="@style/key_base"
+                android:tag="@string/key_3"
+                android:text="@string/key_3" />
+
+            <TextView
+                android:id="@+id/tv_4"
+                style="@style/key_base"
+                android:tag="@string/key_4"
+                android:text="@string/key_4" />
+
+            <TextView
+                android:id="@+id/tv_5"
+                style="@style/key_base"
+                android:tag="@string/key_5"
+                android:text="@string/key_5" />
+
+            <TextView
+                android:id="@+id/tv_6"
+                style="@style/key_base"
+                android:tag="@string/key_6"
+                android:text="@string/key_6" />
+
+            <TextView
+                android:id="@+id/tv_7"
+                style="@style/key_base"
+                android:tag="@string/key_7"
+                android:text="@string/key_7" />
+
+            <TextView
+                android:id="@+id/tv_8"
+                style="@style/key_base"
+                android:tag="@string/key_8"
+                android:text="@string/key_8" />
+
+            <TextView
+                android:id="@+id/tv_9"
+                style="@style/key_base"
+                android:tag="@string/key_9"
+                android:text="@string/key_9" />
+
+            <TextView
+                android:id="@+id/tv_10"
+                style="@style/key_base"
+                android:tag="@string/key_0"
+                android:text="@string/key_0" />
+
+            <TextView
+                android:id="@+id/tv_11"
+                style="@style/key_base"
+                android:tag="@string/key_del_value"
+                android:text="@string/key_del" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_12"
+                        style="@style/key_base"
+                        android:tag="@string/key_page_value"
+                        android:text="@string/key_page" />
+
+                    <TextView
+                        android:id="@+id/tv_13"
+                        style="@style/key_base"
+                        android:tag="@string/key_symbol_0"
+                        android:text="@string/key_symbol_0" />
+
+                    <TextView
+                        android:id="@+id/tv_14"
+                        style="@style/key_base"
+                        android:tag="@string/key_symbol_1"
+                        android:text="@string/key_symbol_1" />
+
+                    <TextView
+                        android:id="@+id/tv_15"
+                        style="@style/key_base"
+                        android:tag="@string/key_symbol_2"
+                        android:text="@string/key_symbol_2" />
+
+                    <TextView
+                        android:id="@+id/tv_16"
+                        style="@style/key_base"
+                        android:tag="@string/key_symbol_3"
+                        android:text="@string/key_symbol_3" />
+
+                    <TextView
+                        android:id="@+id/tv_17"
+                        style="@style/key_base"
+                        android:tag="@string/key_symbol_4"
+                        android:text="@string/key_symbol_4" />
+
+                    <TextView
+                        android:id="@+id/tv_18"
+                        style="@style/key_base"
+                        android:tag="@string/key_symbol_5"
+                        android:text="@string/key_symbol_5" />
+
+                    <TextView
+                        android:id="@+id/tv_19"
+                        style="@style/key_base"
+                        android:tag="@string/key_symbol_6"
+                        android:text="@string/key_symbol_6" />
+
+                    <TextView
+                        android:id="@+id/tv_20"
+                        style="@style/key_base"
+                        android:tag="@string/key_symbol_7"
+                        android:text="@string/key_symbol_7" />
+
+                    <TextView
+                        android:id="@+id/tv_21"
+                        style="@style/key_base"
+                        android:tag="@string/key_symbol_8"
+                        android:text="@string/key_symbol_8" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_22"
+                        style="@style/key_base"
+                        android:tag="@string/key_char_value"
+                        android:text="@string/key_char" />
+
+                    <TextView
+                        android:id="@+id/tv_23"
+                        style="@style/key_base"
+                        android:tag="@string/key_symbol_9"
+                        android:text="@string/key_symbol_9" />
+
+                    <TextView
+                        android:id="@+id/tv_24"
+                        style="@style/key_base"
+                        android:tag="@string/key_symbol_10"
+                        android:text="@string/key_symbol_10" />
+
+                    <TextView
+                        android:id="@+id/tv_25"
+                        style="@style/key_base"
+                        android:tag="@string/key_symbol_11"
+                        android:text="@string/key_symbol_11" />
+
+                    <TextView
+                        android:id="@+id/tv_26"
+                        style="@style/key_base"
+                        android:tag="@string/key_symbol_12"
+                        android:text="@string/key_symbol_12" />
+
+                    <ImageView
+                        android:id="@+id/iv_1"
+                        style="@style/key_long_empty"
+                        android:scaleType="center"
+                        android:src="@drawable/empty_unfocus"
+                        android:tag="@string/key_empty_value" />
+
+                    <TextView
+                        android:id="@+id/tv_27"
+                        style="@style/key_base"
+                        android:tag="@string/key_symbol_13"
+                        android:text="@string/key_symbol_13" />
+
+                    <TextView
+                        android:id="@+id/tv_28"
+                        style="@style/key_base"
+                        android:tag="@string/key_symbol_14"
+                        android:text="@string/key_symbol_14" />
+
+                    <TextView
+                        android:id="@+id/tv_29"
+                        style="@style/key_base"
+                        android:tag="@string/key_symbol_15"
+                        android:text="@string/key_symbol_15" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_30"
+                style="@style/key_high"
+                android:tag="@string/key_finish_value"
+                android:text="@string/key_finish" />
+        </LinearLayout>
+    </LinearLayout>
+ 
+    
+    
+    <!-- Number Page 2 -->
+     <LinearLayout
+        android:id="@+id/ll_keyboard_number_page_2"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+         <!--  first line -->
+        
+         <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_47"
+                style="@style/key_base"
+                android:tag="@string/key_1"
+                android:text="@string/key_1" />
+
+            <TextView
+                android:id="@+id/tv_48"
+                style="@style/key_base"
+                android:tag="@string/key_2"
+                android:text="@string/key_2" />
+
+            <TextView
+                android:id="@+id/tv_49"
+                style="@style/key_base"
+                android:tag="@string/key_3"
+                android:text="@string/key_3" />
+
+            <TextView
+                android:id="@+id/tv_50"
+                style="@style/key_base"
+                android:tag="@string/key_4"
+                android:text="@string/key_4" />
+
+            <TextView
+                android:id="@+id/tv_51"
+                style="@style/key_base"
+                android:tag="@string/key_5"
+                android:text="@string/key_5" />
+
+            <TextView
+                android:id="@+id/tv_52"
+                style="@style/key_base"
+                android:tag="@string/key_6"
+                android:text="@string/key_6" />
+
+            <TextView
+                android:id="@+id/tv_53"
+                style="@style/key_base"
+                android:tag="@string/key_7"
+                android:text="@string/key_7" />
+
+            <TextView
+                android:id="@+id/tv_54"
+                style="@style/key_base"
+                android:tag="@string/key_8"
+                android:text="@string/key_8" />
+
+            <TextView
+                android:id="@+id/tv_55"
+                style="@style/key_base"
+                android:tag="@string/key_9"
+                android:text="@string/key_9" />
+
+            <TextView
+                android:id="@+id/tv_56"
+                style="@style/key_base"
+                android:tag="@string/key_0"
+                android:text="@string/key_0" />
+
+            <TextView
+                android:id="@+id/tv_57"
+                style="@style/key_base"
+                android:tag="@string/key_del_value"
+                android:text="@string/key_del" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <!--  second line -->
+               
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_58"
+                        style="@style/key_base"
+                        android:tag="@string/key_page_value"
+                        android:text="@string/key_page" />
+
+                    <TextView
+                        android:id="@+id/tv_31"
+                        style="@style/key_base"
+                        android:tag="@string/key_symbol_16"
+                        android:text="@string/key_symbol_16" />
+
+                    <TextView
+                        android:id="@+id/tv_32"
+                        style="@style/key_base"
+                        android:tag="@string/key_symbol_17"
+                        android:text="@string/key_symbol_17" />
+
+                    <TextView
+                        android:id="@+id/tv_33"
+                        style="@style/key_base"
+                        android:tag="@string/key_symbol_18"
+                        android:text="@string/key_symbol_18" />
+
+                    <TextView
+                        android:id="@+id/tv_34"
+                        style="@style/key_base"
+                        android:tag="@string/key_symbol_19"
+                        android:text="@string/key_symbol_19" />
+
+                    <TextView
+                        android:id="@+id/tv_35"
+                        style="@style/key_base"
+                        android:tag="@string/key_symbol_20"
+                        android:text="@string/key_symbol_20" />
+
+                    <TextView
+                        android:id="@+id/tv_36"
+                        style="@style/key_base"
+                        android:tag="@string/key_symbol_21"
+                        android:text="@string/key_symbol_21" />
+
+                    <TextView
+                        android:id="@+id/tv_37"
+                        style="@style/key_base"
+                        android:tag="@string/key_symbol_22"
+                        android:text="@string/key_symbol_22" />
+
+                    <TextView
+                        android:id="@+id/tv_38"
+                        style="@style/key_base"
+                        android:tag="@string/key_symbol_23"
+                        android:text="@string/key_symbol_23" />
+
+                    <TextView
+                        android:id="@+id/tv_39"
+                        style="@style/key_base"
+                        android:tag="@string/key_symbol_24"
+                        android:text="@string/key_symbol_24" />
+                </LinearLayout>
+
+                <!--  third line -->
+               
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_59"
+                        style="@style/key_base"
+                        android:tag="@string/key_char_value"
+                        android:text="@string/key_char" />
+
+                    <TextView
+                        android:id="@+id/tv_40"
+                        style="@style/key_base"
+                        android:tag="@string/key_symbol_25"
+                        android:text="@string/key_symbol_25" />
+
+                    <TextView
+                        android:id="@+id/tv_41"
+                        style="@style/key_base"
+                        android:tag="@string/key_symbol_26"
+                        android:text="@string/key_symbol_26" />
+
+                    <TextView
+                        android:id="@+id/tv_42"
+                        style="@style/key_base"
+                        android:tag="@string/key_symbol_27"
+                        android:text="@string/key_symbol_27" />
+
+                    <TextView
+                        android:id="@+id/tv_43"
+                        style="@style/key_base"
+                        android:tag="@string/key_symbol_28"
+                        android:text="@string/key_symbol_28" />
+
+                    <ImageView
+                        android:id="@+id/iv_2"
+                        style="@style/key_long_empty"
+                        android:scaleType="center"
+                        android:src="@drawable/empty_unfocus"
+                        android:tag="@string/key_empty_value" />
+
+                    <TextView
+                        android:id="@+id/tv_44"
+                        style="@style/key_base"
+                        android:tag="@string/key_symbol_29"
+                        android:text="@string/key_symbol_29" />
+
+                    <TextView
+                        android:id="@+id/tv_45"
+                        style="@style/key_base"
+                        android:tag="@string/key_symbol_30"
+                        android:text="@string/key_symbol_30" />
+
+                    <TextView
+                        android:id="@+id/tv_46"
+                        style="@style/key_base"
+                        android:tag="@string/key_symbol_31"
+                        android:text="@string/key_symbol_31" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_60"
+                style="@style/key_high"
+                android:tag="@string/key_finish_value"
+                android:text="@string/key_finish" />
+        </LinearLayout>
+         
+     </LinearLayout>
+    
+
+
+    <!-- Lower Char -->
+
+    <LinearLayout
+        android:id="@+id/ll_keyboard_lower_char"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <!-- first line -->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/iv_character_1"
+                style="@style/key_character_case"
+                android:scaleType="center"
+                android:src="@drawable/lower_unfocus"
+                android:tag="@string/key_character_lower_value" />
+
+            <TextView
+                android:id="@+id/tv_61"
+                style="@style/key_base"
+                android:tag="@string/key_a"
+                android:text="@string/key_a" />
+
+            <TextView
+                android:id="@+id/tv_62"
+                style="@style/key_base"
+                android:tag="@string/key_b"
+                android:text="@string/key_b" />
+
+            <TextView
+                android:id="@+id/tv_63"
+                style="@style/key_base"
+                android:tag="@string/key_c"
+                android:text="@string/key_c" />
+
+            <TextView
+                android:id="@+id/tv_64"
+                style="@style/key_base"
+                android:tag="@string/key_d"
+                android:text="@string/key_d" />
+
+            <TextView
+                android:id="@+id/tv_65"
+                style="@style/key_base"
+                android:tag="@string/key_e"
+                android:text="@string/key_e" />
+
+            <TextView
+                android:id="@+id/tv_66"
+                style="@style/key_base"
+                android:tag="@string/key_f"
+                android:text="@string/key_f" />
+
+            <TextView
+                android:id="@+id/tv_67"
+                style="@style/key_base"
+                android:tag="@string/key_g"
+                android:text="@string/key_g" />
+
+            <TextView
+                android:id="@+id/tv_68"
+                style="@style/key_base"
+                android:tag="@string/key_h"
+                android:text="@string/key_h" />
+
+            <TextView
+                android:id="@+id/tv_69"
+                style="@style/key_base"
+                android:tag="@string/key_i"
+                android:text="@string/key_i" />
+
+            <TextView
+                android:id="@+id/tv_70"
+                style="@style/key_base"
+                android:tag="@string/key_j"
+                android:text="@string/key_j" />
+
+            <TextView
+                android:id="@+id/tv_71"
+                style="@style/key_base"
+                android:tag="@string/key_del_value"
+                android:text="@string/key_del" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_72"
+                style="@style/key_high"
+                android:tag="@string/key_character_value"
+                android:text="@string/key_character" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <!-- second line -->
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_73"
+                        style="@style/key_base"
+                        android:tag="@string/key_k"
+                        android:text="@string/key_k" />
+
+                    <TextView
+                        android:id="@+id/tv_74"
+                        style="@style/key_base"
+                        android:tag="@string/key_l"
+                        android:text="@string/key_l" />
+
+                    <TextView
+                        android:id="@+id/tv_75"
+                        style="@style/key_base"
+                        android:tag="@string/key_m"
+                        android:text="@string/key_m" />
+
+                    <TextView
+                        android:id="@+id/tv_76"
+                        style="@style/key_base"
+                        android:tag="@string/key_n"
+                        android:text="@string/key_n" />
+
+                    <TextView
+                        android:id="@+id/tv_77"
+                        style="@style/key_base"
+                        android:tag="@string/key_o"
+                        android:text="@string/key_o" />
+
+                    <TextView
+                        android:id="@+id/tv_78"
+                        style="@style/key_base"
+                        android:tag="@string/key_p"
+                        android:text="@string/key_p" />
+
+                    <TextView
+                        android:id="@+id/tv_79"
+                        style="@style/key_base"
+                        android:tag="@string/key_q"
+                        android:text="@string/key_q" />
+
+                    <TextView
+                        android:id="@+id/tv_80"
+                        style="@style/key_base"
+                        android:tag="@string/key_r"
+                        android:text="@string/key_r" />
+
+                    <TextView
+                        android:id="@+id/tv_81"
+                        style="@style/key_base"
+                        android:tag="@string/key_s"
+                        android:text="@string/key_s" />
+
+                    <TextView
+                        android:id="@+id/tv_82"
+                        style="@style/key_base"
+                        android:tag="@string/key_symbol_0"
+                        android:text="@string/key_symbol_0" />
+                </LinearLayout>
+
+                <!-- third line -->
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_83"
+                        style="@style/key_base"
+                        android:tag="@string/key_t"
+                        android:text="@string/key_t" />
+
+                    <TextView
+                        android:id="@+id/tv_84"
+                        style="@style/key_base"
+                        android:tag="@string/key_u"
+                        android:text="@string/key_u" />
+
+                    <TextView
+                        android:id="@+id/tv_85"
+                        style="@style/key_base"
+                        android:tag="@string/key_v"
+                        android:text="@string/key_v" />
+
+                    <TextView
+                        android:id="@+id/tv_86"
+                        style="@style/key_base"
+                        android:tag="@string/key_w"
+                        android:text="@string/key_w" />
+
+                    <ImageView
+                        android:id="@+id/iv_3"
+                        style="@style/key_long_empty"
+                        android:scaleType="center"
+                        android:src="@drawable/empty_unfocus"
+                        android:tag="@string/key_empty_value" />
+
+                    <TextView
+                        android:id="@+id/tv_87"
+                        style="@style/key_base"
+                        android:tag="@string/key_x"
+                        android:text="@string/key_x" />
+
+                    <TextView
+                        android:id="@+id/tv_88"
+                        style="@style/key_base"
+                        android:tag="@string/key_y"
+                        android:text="@string/key_y" />
+
+                    <TextView
+                        android:id="@+id/tv_89"
+                        style="@style/key_base"
+                        android:tag="@string/key_z"
+                        android:text="@string/key_z" />
+
+                    <TextView
+                        android:id="@+id/tv_90"
+                        style="@style/key_base"
+                        android:tag="@string/key_symbol_1"
+                        android:text="@string/key_symbol_1" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_91"
+                style="@style/key_high"
+                android:tag="@string/key_finish_value"
+                android:text="@string/key_finish" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Upper Char -->
+
+    <LinearLayout
+        android:id="@+id/ll_keyboard_upper_char"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="vertical" >
+
+        <!-- first line -->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/iv_character_2"
+                style="@style/key_character_case"
+                android:scaleType="center"
+                android:src="@drawable/upper"
+                android:tag="@string/key_character_upper_value" />
+
+            <TextView
+                android:id="@+id/tv_92"
+                style="@style/key_base"
+                android:tag="@string/key_a_1"
+                android:text="@string/key_a_1" />
+
+            <TextView
+                android:id="@+id/tv_93"
+                style="@style/key_base"
+                android:tag="@string/key_b_1"
+                android:text="@string/key_b_1" />
+
+            <TextView
+                android:id="@+id/tv_94"
+                style="@style/key_base"
+                android:tag="@string/key_c_1"
+                android:text="@string/key_c_1" />
+
+            <TextView
+                android:id="@+id/tv_95"
+                style="@style/key_base"
+                android:tag="@string/key_d_1"
+                android:text="@string/key_d_1" />
+
+            <TextView
+                android:id="@+id/tv_96"
+                style="@style/key_base"
+                android:tag="@string/key_e_1"
+                android:text="@string/key_e_1" />
+
+            <TextView
+                android:id="@+id/tv_97"
+                style="@style/key_base"
+                android:tag="@string/key_f_1"
+                android:text="@string/key_f_1" />
+
+            <TextView
+                android:id="@+id/tv_98"
+                style="@style/key_base"
+                android:tag="@string/key_g_1"
+                android:text="@string/key_g_1" />
+
+            <TextView
+                android:id="@+id/tv_99"
+                style="@style/key_base"
+                android:tag="@string/key_h_1"
+                android:text="@string/key_h_1" />
+
+            <TextView
+                android:id="@+id/tv_100"
+                style="@style/key_base"
+                android:tag="@string/key_i_1"
+                android:text="@string/key_i_1" />
+
+            <TextView
+                android:id="@+id/tv_101"
+                style="@style/key_base"
+                android:tag="@string/key_j_1"
+                android:text="@string/key_j_1" />
+
+            <TextView
+                android:id="@+id/tv_102"
+                style="@style/key_base"
+                android:tag="@string/key_del_value"
+                android:text="@string/key_del" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_103"
+                style="@style/key_high"
+                android:tag="@string/key_character_value"
+                android:text="@string/key_character" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <!-- second line -->
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_104"
+                        style="@style/key_base"
+                        android:tag="@string/key_k_1"
+                        android:text="@string/key_k_1" />
+
+                    <TextView
+                        android:id="@+id/tv_105"
+                        style="@style/key_base"
+                        android:tag="@string/key_l_1"
+                        android:text="@string/key_l_1" />
+
+                    <TextView
+                        android:id="@+id/tv_106"
+                        style="@style/key_base"
+                        android:tag="@string/key_m_1"
+                        android:text="@string/key_m_1" />
+
+                    <TextView
+                        android:id="@+id/tv_107"
+                        style="@style/key_base"
+                        android:tag="@string/key_n_1"
+                        android:text="@string/key_n_1" />
+
+                    <TextView
+                        android:id="@+id/tv_108"
+                        style="@style/key_base"
+                        android:tag="@string/key_o_1"
+                        android:text="@string/key_o_1" />
+
+                    <TextView
+                        android:id="@+id/tv_109"
+                        style="@style/key_base"
+                        android:tag="@string/key_p_1"
+                        android:text="@string/key_p_1" />
+
+                    <TextView
+                        android:id="@+id/tv_110"
+                        style="@style/key_base"
+                        android:tag="@string/key_q_1"
+                        android:text="@string/key_q_1" />
+
+                    <TextView
+                        android:id="@+id/tv_111"
+                        style="@style/key_base"
+                        android:tag="@string/key_r_1"
+                        android:text="@string/key_r_1" />
+
+                    <TextView
+                        android:id="@+id/tv_112"
+                        style="@style/key_base"
+                        android:tag="@string/key_s_1"
+                        android:text="@string/key_s_1" />
+
+                    <TextView
+                        android:id="@+id/tv_113"
+                        style="@style/key_base"
+                        android:tag="@string/key_symbol_0"
+                        android:text="@string/key_symbol_0" />
+                </LinearLayout>
+
+                <!-- third line -->
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_114"
+                        style="@style/key_base"
+                        android:tag="@string/key_t_1"
+                        android:text="@string/key_t_1" />
+
+                    <TextView
+                        android:id="@+id/tv_115"
+                        style="@style/key_base"
+                        android:tag="@string/key_u_1"
+                        android:text="@string/key_u_1" />
+
+                    <TextView
+                        android:id="@+id/tv_116"
+                        style="@style/key_base"
+                        android:tag="@string/key_v_1"
+                        android:text="@string/key_v_1" />
+
+                    <TextView
+                        android:id="@+id/tv_117"
+                        style="@style/key_base"
+                        android:tag="@string/key_w_1"
+                        android:text="@string/key_w_1" />
+
+                    <ImageView
+                        android:id="@+id/iv_4"
+                        style="@style/key_long_empty"
+                        android:scaleType="center"
+                        android:src="@drawable/empty_unfocus"
+                        android:tag="@string/key_empty_value" />
+
+                    <TextView
+                        android:id="@+id/tv_118"
+                        style="@style/key_base"
+                        android:tag="@string/key_x_1"
+                        android:text="@string/key_x_1" />
+
+                    <TextView
+                        android:id="@+id/tv_119"
+                        style="@style/key_base"
+                        android:tag="@string/key_y_1"
+                        android:text="@string/key_y_1" />
+
+                    <TextView
+                        android:id="@+id/tv_120"
+                        style="@style/key_base"
+                        android:tag="@string/key_z_1"
+                        android:text="@string/key_z_1" />
+
+                    <TextView
+                        android:id="@+id/tv_121"
+                        style="@style/key_base"
+                        android:tag="@string/key_symbol_1"
+                        android:text="@string/key_symbol_1" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_122"
+                style="@style/key_high"
+                android:tag="@string/key_finish_value"
+                android:text="@string/key_finish" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

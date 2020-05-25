@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:gravity="center">
+
+    <ImageButton
+        android:id="@+id/btn_n_top"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+
+        android:layout_margin="4dp"
+        android:background="@drawable/selector_gray_line_keyboard"
+        android:gravity="center"
+        android:paddingBottom="3dp"
+        android:scaleType="center"
+        android:src="@drawable/ic_keyboard_arrow_up_white_36dp" />
+
+    <ImageButton
+        android:id="@+id/btn_n_bottom"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="4dp"
+
+        android:background="@drawable/selector_gray_line_keyboard"
+        android:gravity="center"
+
+        android:paddingBottom="3dp"
+        android:scaleType="center"
+        android:src="@drawable/ic_keyboard_arrow_down_white_36dp" />
+
+    <ImageButton
+        android:id="@+id/btn_n_left"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+
+        android:layout_margin="4dp"
+        android:background="@drawable/selector_gray_line_keyboard"
+        android:gravity="center"
+
+        android:paddingBottom="3dp"
+        android:scaleType="center"
+        android:src="@drawable/ic_keyboard_arrow_left_white_36dp" />
+
+    <ImageButton
+        android:id="@+id/btn_n_right"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="4dp"
+
+        android:background="@drawable/selector_gray_line_keyboard"
+        android:gravity="center"
+
+        android:paddingBottom="3dp"
+        android:scaleType="center"
+        android:src="@drawable/ic_keyboard_arrow_right_white_36dp" />
+
+    <ImageButton
+        android:id="@+id/btn_n_back"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="4dp"
+
+        android:background="@drawable/selector_gray_line_keyboard"
+        android:gravity="center"
+
+        android:paddingBottom="3dp"
+        android:scaleType="center"
+        android:src="@drawable/ic_keyboard_return_white_24dp" />
+
+    <Button
+        android:id="@+id/btn_n_ok"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="4dp"
+
+        android:background="@drawable/selector_gray_line_keyboard"
+        android:gravity="center"
+        android:paddingBottom="3dp"
+        android:scaleType="center"
+        android:src="@drawable/ic_keyboard_arrow_up_white_36dp"
+        android:text="OK"
+        android:textColor="@color/white" />
+
+</LinearLayout>

@@ -1,0 +1,22 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView                    
+        android:id="@+id/nineKeybordButtonTextView0" 
+        android:layout_width="match_parent"
+        android:layout_height="5dp"               
+        android:visibility="gone" 
+        />
+    <TextView 
+        android:id="@+id/nineKeybordButtonTextView1"      
+        style="@style/NineKeybordButtonText1"
+        />
+    <TextView 
+        android:id="@+id/nineKeybordButtonTextView2"       
+        style="@style/NineKeybordButtonText2"
+        />
+    <TextView                    
+        android:id="@+id/nineKeybordButtonTextView3" 
+        android:layout_width="match_parent"
+        android:layout_height="5dp"               
+        android:visibility="gone" 
+        />
+</merge>
