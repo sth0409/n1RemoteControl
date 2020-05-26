@@ -36,7 +36,7 @@ class KeyBoardActivity : AppCompatActivity() {
 //        AllCharacterKeyboardUtil(this)
         et.setOnKeyListener(object : View.OnKeyListener {
             override fun onKey(v: View?, keyCode: Int, event: KeyEvent?): Boolean {
-                if(event!!.getAction() == KeyEvent.ACTION_DOWN){
+                if (event!!.getAction() == KeyEvent.ACTION_DOWN) {
                     sendCode(event!!.keyCode)
                 }
 
@@ -44,9 +44,44 @@ class KeyBoardActivity : AppCompatActivity() {
             }
 
         })
+        et.addTextChangedListener(object : TextWatcher {
+            override fun afterTextChanged(s: Editable?) {
+
+            }
+
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+
+            }
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                if (!s.isNullOrEmpty()) {
+                    checkLast(getLast(s))
+                }
+            }
+        })
 
 
     }
+
+    private fun checkLast(last: Char) {
+        var lastInt: Int = last as Int
+        if (lastInt in 48..57) {
+            //数字
+            sendCode(lastInt - 41)
+        } else if (lastInt in 48..57 || lastInt in 97..122) {
+            //字母
+            var lastIntUpperCase: Int = last.toUpperCase() as Int
+            sendCode(lastIntUpperCase - 36)
+        }
+    }
+
+    private fun getLast(s: CharSequence?): Char {
+
+        return s!!.last()
+
+
+    }
+
     private fun sendCode(code: Int) {
 
         if (TextUtils.isEmpty(sp.getString("ip", ""))) {
