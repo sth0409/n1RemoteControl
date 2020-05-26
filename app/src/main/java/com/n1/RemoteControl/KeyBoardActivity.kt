@@ -64,13 +64,13 @@ class KeyBoardActivity : AppCompatActivity() {
     }
 
     private fun checkLast(last: Char) {
-        var lastInt: Int = last as Int
+        var lastInt: Int = last.toInt()
         if (lastInt in 48..57) {
             //数字
             sendCode(lastInt - 41)
         } else if (lastInt in 48..57 || lastInt in 97..122) {
             //字母
-            var lastIntUpperCase: Int = last.toUpperCase() as Int
+            var lastIntUpperCase: Int = last.toUpperCase().toInt()
             sendCode(lastIntUpperCase - 36)
         }
     }

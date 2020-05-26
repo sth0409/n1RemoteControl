@@ -7,9 +7,11 @@
     tools:context=".KeyBoardActivity">
 
     <EditText
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
         android:id="@+id/et"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"></EditText>
+        android:layout_height="wrap_content"
+        android:digits="1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM"
+        android:hint="只支持数字和字母"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></EditText>
 </androidx.constraintlayout.widget.ConstraintLayout>
