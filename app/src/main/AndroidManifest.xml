@@ -30,6 +30,7 @@
                 <action android:name="com.n1.RemoteControl.right" />
                 <action android:name="com.n1.RemoteControl.ok" />
                 <action android:name="com.n1.RemoteControl.back" />
+                <action android:name="com.n1.RemoteControl.action.view" />
             </intent-filter>
         </receiver>
 

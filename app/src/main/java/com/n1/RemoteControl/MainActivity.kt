@@ -34,7 +34,7 @@ import androidx.core.app.NotificationCompat
 class MainActivity : AppCompatActivity() {
     var host = ""
     lateinit var sp: SharedPreferences
-
+    lateinit var intentN: Intent
 
 
     /**
@@ -60,9 +60,21 @@ class MainActivity : AppCompatActivity() {
         )
         setContentView(R.layout.activity_controller)
 
+        if (!isTaskRoot()) {
+            var intent = getIntent();
+            var action = intent.getAction();
+            if (intent.hasCategory(Intent.CATEGORY_LAUNCHER) && Intent.ACTION_MAIN.equals(action)) {
+                finish();
+                return;
+            }
+        }
+
+
+
+
         sp = getSharedPreferences("remotecontrol", Context.MODE_PRIVATE)
-
-
+        intentN = Intent()
+        intentN.setClass(this, NotificationBroadcast::class.java)
         tv_ip.text = sp.getString("ip", "")
         var isVibrate = sp.getBoolean("vibrate", false)
         if (isVibrate) {
@@ -81,7 +93,14 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-        btn_keyboard.setOnClickListener { startActivity(Intent(this,KeyBoardActivity::class.java)) }
+        btn_keyboard.setOnClickListener {
+            startActivity(
+                Intent(
+                    this,
+                    KeyBoardActivity::class.java
+                )
+            )
+        }
         btn_back.setOnClickListener { sendCode(4) }
         btn_bottom.setOnClickListener { sendCode(20) }
         btn_top.setOnClickListener { sendCode(19) }
@@ -127,20 +146,21 @@ class MainActivity : AppCompatActivity() {
         } else {
             Notification.Builder(this)
         }
+        intentN.setAction("action.view")
         notificationB.setContent(remoteView)
             .setOngoing(true)
             .setDefaults(NotificationCompat.FLAG_ONLY_ALERT_ONCE)
             .setPriority(Notification.PRIORITY_HIGH)
             .setWhen(System.currentTimeMillis())
             .setSmallIcon(R.mipmap.ic_launcher)
-//            .setContentIntent(
-//                PendingIntent.getBroadcast(
-//                    this,
-//                    2,
-//                    Intent("action.view"),
-//                    FLAG_UPDATE_CURRENT
-//                )
-//            )
+            .setContentIntent(
+                PendingIntent.getBroadcast(
+                    this,
+                    2,
+                    intentN,
+                    0
+                )
+            )
 
 
         var nfm = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
@@ -160,39 +180,38 @@ class MainActivity : AppCompatActivity() {
 
     private fun createPendingIntent(code: Int): PendingIntent? {
         var pendingIntent: PendingIntent? = null
-        var intent = Intent()
-        intent.setClass(this, NotificationBroadcast::class.java)
+
         when (code) {
             R.id.btn_n_top -> {
-                intent.setAction("top")
+                intentN.setAction("top")
                 pendingIntent =
-                    PendingIntent.getBroadcast(this, 1, intent, 0)
+                    PendingIntent.getBroadcast(this, 1, intentN, 0)
             }
             R.id.btn_n_bottom -> {
-                intent.setAction("bottom")
+                intentN.setAction("bottom")
                 pendingIntent =
-                    PendingIntent.getBroadcast(this, 1, intent, 0)
+                    PendingIntent.getBroadcast(this, 1, intentN, 0)
             }
             R.id.btn_n_left -> {
 
-                intent.setAction("left")
+                intentN.setAction("left")
                 pendingIntent =
-                    PendingIntent.getBroadcast(this, 1, intent, 0)
+                    PendingIntent.getBroadcast(this, 1, intentN, 0)
             }
             R.id.btn_n_right -> {
-                intent.setAction("right")
+                intentN.setAction("right")
                 pendingIntent =
-                    PendingIntent.getBroadcast(this, 1, intent, 0)
+                    PendingIntent.getBroadcast(this, 1, intentN, 0)
             }
             R.id.btn_n_ok -> {
-                intent.setAction("ok")
+                intentN.setAction("ok")
                 pendingIntent =
-                    PendingIntent.getBroadcast(this, 1, intent, 0)
+                    PendingIntent.getBroadcast(this, 1, intentN, 0)
             }
             R.id.btn_n_back -> {
-                intent.setAction("back")
+                intentN.setAction("back")
                 pendingIntent =
-                    PendingIntent.getBroadcast(this, 1, intent, 0)
+                    PendingIntent.getBroadcast(this, 1, intentN, 0)
             }
         }
         return pendingIntent

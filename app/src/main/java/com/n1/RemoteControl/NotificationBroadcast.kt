@@ -55,6 +55,11 @@ class NotificationBroadcast : BroadcastReceiver() {
 
                 sendCode(4)
             }
+            "action.view" -> {
+                val msgIntent =
+                    context!!.getPackageManager().getLaunchIntentForPackage(context!!.packageName)//获取启动Activity
+                context!!.startActivity(msgIntent)
+            }
         }
 
 
@@ -85,7 +90,8 @@ class NotificationBroadcast : BroadcastReceiver() {
 
                 override fun onSuccess(t: String?) {
                     if (sp.getBoolean("vibrate", false)) {
-                        var vibrator = context.getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+                        var vibrator =
+                            context.getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
                         vibrator.vibrate(100)
                     }
 
