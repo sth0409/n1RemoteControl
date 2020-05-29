@@ -109,7 +109,7 @@ class MainActivity : AppCompatActivity() {
         btn_left.setOnClickListener { sendCode(21) }
         btn_right.setOnClickListener { sendCode(22) }
         btn_menu.setOnClickListener { sendCode(82) }
-        btn_minus.setOnClickListener { sendCode(26) }
+        btn_minus.setOnClickListener { sendCode(25) }
         btn_plus.setOnClickListener { sendCode(24) }
         btn_ok.setOnClickListener { sendCode(23) }
         btn_setting.setOnClickListener { onSetting() }
